@@ -1,2 +1,2 @@
-# project5
+# Project5
 Movie and Game Rating System
