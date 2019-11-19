@@ -48,8 +48,7 @@ implode(", ", array_keys($new_user)),
   echo $_POST['firstname']." successfully added.";
 } ?>
 
-<h2>Add a user</h2>
-name="firstname" id="firstname
+<h2 class="title is-2">New User Signup</h2>
 <form method="post">
 
 <div class="field">
@@ -111,22 +110,31 @@ name="firstname" id="firstname
 </div>
 
 <div class="field">
+<label class="label">Location</label>
+<div class="control">
+  <input class="input" type="text" placeholder="ex Ogden" name="location" id="location">
+</div>
+</div>
+
+<div class="field">
 <label class="label">Password</label>
 <div class="control">
-  <input class="input" type="text" name="user_pwd" id="user_pwd">
+  <input class="input" type="password" name="user_pwd" id="user_pwd">
 </div>
 </div>
 
 
 <div class="field">
   <label class="label">Avatar</label>
-  <div class="control">
+  <div class="control has-icons-left">
     <div class="select">
       <select>
-        <option>Select dropdown</option>
-        <option>Dog</option>
+        <option value="" name="user_gravatar" id="user_gravatar">Cat</option>
+        <option value="" name="user_gravatar" id="user_gravatar">Dog</option>
+        <option value="" name="user_gravatar" id="user_gravatar">Monkey</option>
+        <option value="" name="user_gravatar" id="user_gravatar">Rat</option>
+        <option value="" name="user_gravatar" id="user_gravatar">Bird</option>
       </select>
-      <input class="input" type="text" name="user_gravatar" id="user_gravatar">
     </div>
   </div>
 </div>
@@ -134,38 +142,15 @@ name="firstname" id="firstname
 <div class="field">
   <label class="label">Bio</label>
   <div class="control">
-    <textarea class="textarea" placeholder="Textarea"></textarea>
-    <input class="input" type="text" name="user_bio" id="user_bio">
+    <textarea class="textarea" placeholder="Textarea" name="user_bio" id="user_bio"></textarea>
   </div>
 </div>
 
 <div class="field">
 <label class="label">User Role</label>
 <div class="control">
-  <input class="input" value="1" name="user_role" id="user_role">
+  <input class="input" value="1" name="user_role" id="user_role" placeholder="Disabled input" disabled>
 </div>
-</div>
-
-<div class="field">
-  <div class="control">
-    <label class="checkbox">
-      <input type="checkbox">
-      I agree to the <a href="#">terms and conditions</a>
-    </label>
-  </div>
-</div>
-
-<div class="field">
-  <div class="control">
-    <label class="radio">
-      <input type="radio" name="question">
-      Yes
-    </label>
-    <label class="radio">
-      <input type="radio" name="question">
-      No
-    </label>
-  </div>
 </div>
 
 <div class="field is-grouped">
@@ -176,7 +161,7 @@ name="firstname" id="firstname
     <button class="button is-link is-light">Cancel</button>
   </div>
 </div>
-  <input type="submit" name="submit" value="Submit">
+
 </form>
 
 <a href="index.php">Back to home</a>
