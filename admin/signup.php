@@ -128,12 +128,12 @@ implode(", ", array_keys($new_user)),
   <label class="label">Avatar</label>
   <div class="control has-icons-left">
     <div class="select">
-      <select>
-        <option value="" name="user_gravatar" id="user_gravatar">Cat</option>
-        <option value="" name="user_gravatar" id="user_gravatar">Dog</option>
+      <select style="height: 45px; font-family:Ariel, FontAwesome;">
+        <option value="fas fa-cat" name="user_gravatar" id="user_gravatar">&#xf6be; Cat</option>
+        <option value="fas fa-dog" name="user_gravatar" id="user_gravatar">Dog</option>
         <option value="" name="user_gravatar" id="user_gravatar">Monkey</option>
         <option value="" name="user_gravatar" id="user_gravatar">Rat</option>
-        <option value="" name="user_gravatar" id="user_gravatar">Bird</option>
+        <option value="fas fa-dove" name="user_gravatar" id="user_gravatar">Bird</option>
       </select>
     </div>
   </div>
