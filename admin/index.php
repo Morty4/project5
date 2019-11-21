@@ -1,11 +1,10 @@
 <?php include "templates/header.php"?>
-<ul>
+<!-- <ul>
   <li><a href="create.php">Create</a></li>
   <li><a href="read.php">Read</a></li>
   <li><a href="update.php">Update</a></li>
   <li><a href="delete.php">Delete</a></li>
-</ul>
-<?php include "templates/footer.php"?>
+</ul> -->
 
 <form name="frmUser" method="post" action="">
 	<div class="message"><?php if($message!="") { echo $message; } ?></div>
@@ -26,3 +25,11 @@
 			</tr>
 		</table>
 </form>
+<br>
+<br>
+<div class="container">
+  <div class="has-text-centered">
+  	<a class="button" href="adminDashboard.php">Go to admin dashboard</a>
+  </div>
+</div>
+<?php include "templates/footer.php"?>

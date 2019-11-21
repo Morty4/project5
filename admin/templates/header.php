@@ -28,7 +28,7 @@
             <div class="navbar-start">
                 <a class="navbar-item" href="newmovie.php">Add a Movie</a>
                 <a class="navbar-item" href="rate.php">Rate a Movie</a>
-                <a class="navbar-item" href="search.php">Searcb</a>
+                <a class="navbar-item" href="search.php">Search</a>
             </div>
 
             <div class="navbar-end">
