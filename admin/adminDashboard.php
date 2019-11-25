@@ -1,3 +1,4 @@
+<!-- Page by: Jazmin Belmonte -->
 <?php include "templates/header.php"?>
 <!-- php if(userType = admin)
 		manageAccountButton

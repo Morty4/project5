@@ -1,3 +1,5 @@
+<!-- Page by: Jazmin Belmonte -->
+
 <?php
 
 /**
@@ -5,7 +7,6 @@
   * a parameter.
   *
   */
-
 if (isset($_POST['submit'])) {
   try {
     require "config.php";
@@ -14,9 +15,7 @@ if (isset($_POST['submit'])) {
     $connection = new PDO($dsn, $username, $password, $options);
 
     $sql = "SELECT *
-    FROM users WHERE user_role = 1";
-
-    //$location = $_POST['location'];
+    FROM users";
 
     $statement = $connection->prepare($sql);
     $statement->bindParam(PDO::PARAM_STR);
@@ -31,6 +30,9 @@ if (isset($_POST['submit'])) {
 
 
 <?php include "templates/header.php"?>
+
+
+
 <br>
 <br>
 <div class="AD">
@@ -54,10 +56,50 @@ if (isset($_POST['submit'])) {
         </div>
         <div class="column" id="secondC"> 
             <!-- Second column -->
-            <h2>Find other admin accounts</h2>
-            <form method="post">
+            <p class="is-size-5 has-text-centered has-text-grey">Find Other Admin Accounts</p>
+            <form method="post" class="has-text-centered">
                 <input type="submit" name="submit" value="View Results">
             </form>
+
+
+            <?php
+            if (isset($_POST['submit'])) {
+            if ($result && $statement->rowCount() > 0) { ?>
+                <h2>Results</h2>
+
+                <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+                <thead>
+            <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+            <th>Role</th>
+            <th>Location</th>
+            <th>Date Created</th>
+            </tr>
+                </thead>
+                <tbody>
+            <?php foreach ($result as $row) { ?>
+                <tr>
+            <td><?php echo escape($row["user_id"]); ?></td>
+            <td><?php echo escape($row["user_firstname"]); ?></td>
+            <td><?php echo escape($row["user_lastname"]); ?></td>
+            <td><?php echo escape($row["user_name"]); ?></td>
+            <td><?php echo escape($row["user_role"]); ?></td>
+            <td><?php echo escape($row["user_location"]); ?></td>
+            <td><?php echo escape($row["user_created"]); ?> </td>
+                </tr>
+                <?php } ?>
+                </tbody>
+            </table>
+            <?php } else { ?>
+                > No results found.
+            <?php }
+            } ?>
+
+
+
         </div>
     </div>
 
