@@ -14,11 +14,23 @@
     </ul>
     </div>
 
-    <ul>
-    <li><a href="readAdmin.php">Find other admin accounts</a></li>
-    <li><a href="updateAdmin.php">Update admin account</a></li>
-    <li><a href="deleteAdmin.php">Delete account</a></li>
-    </ul>
+
+    <div class="columns">
+        <div class="column">
+            <!-- First column -->
+            <ul class="has-text-centered">
+                <li><a href="readAdmin.php">Find Other Admin Accounts</a></li>
+                <li><a href="updateAdmin.php">Update Admin Account</a></li>
+                <li><a href="deleteAdmin.php">Delete Admin Account</a></li>
+            </ul>
+        </div>
+        <div class="column" id="secondC"> 
+            <!-- Second column -->
+            <br>
+            <p class="is-size-5 has-text-centered has-text-grey">Please make a selection.</p>
+        </div>
+    </div>
+
 </div>
 
 <?php include "templates/footer.php"?>

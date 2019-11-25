@@ -4,3 +4,8 @@
     border: 1px solid gray;
     border-radius: 8px;
 }
+
+#secondC{
+     border: solid gray 1px;
+     border-radius: 8px;
+}
