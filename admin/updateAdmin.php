@@ -19,15 +19,15 @@
         <div class="column">
             <!-- First column -->
             <ul class="has-text-centered">
-                <li><a href="readAdmin.php">Manage Other Admin Accounts</a></li>
-                <li><a href="updateAdmin.php">Update Admin Account</a></li>
+                <li><a href="readAdmin.php">Find Other Admin Accounts</a></li>
+                <li class="selected"><a href="updateAdmin.php">Update Admin Account</a></li>
                 <li><a href="deleteAdmin.php">Delete Admin Account</a></li>
             </ul>
         </div>
         <div class="column" id="secondC"> 
             <!-- Second column -->
             <br>
-            <p class="is-size-5 has-text-centered has-text-grey">Please make a selection.</p>
+            <p class="is-size-5 has-text-centered has-text-grey">Update Admin</p>
         </div>
     </div>
 
