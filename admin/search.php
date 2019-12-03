@@ -27,8 +27,6 @@
 </div>
 
       
-
-
 <?php 
     if (isset($_POST['submit'])) {  
     require "../test/config.php";
@@ -59,32 +57,24 @@
     $country = $details->{'Country'};
     $awards = $details->{'Awards'};
     $poster = $details->{'Poster'};  
-      
-   
-//echo $poster;
+        
+    
+    $released = date("Y-m-d", strtotime($released));
+    $date = date("Y-m-d h:i:s");
+        
       
    $new_movie = array(
-      "title" => $title,
-      "year"  => $year,
-      "rated"     => $rated,
-      "released"       => $released,
-      "runtime"  => $runtime,
-      "genre"     => $genre,
-      "director"       => $director,
-      "writer"  => $writer,
-      "actors"     => $actors,
-      "plot"       => $plot,
-      "language"  => $language,
-      "country"     => $country,
-      "awards"       => $awards,
-      "poster"  => $poster
-        
+      //"user_id"  => ,
+      "content_title"     => $title,
+      "content_description"       => $plot,
+      "content_release_date"  => $released,
+      //"content_avg_rating"     => ,
+      "content_created"       => $date,
+      "content_updated"  => $date,
+              
     );   
 
 
-
-  
-      
       
  try{
      $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
@@ -93,7 +83,7 @@
 
 $sql = sprintf(
 "INSERT INTO %s (%s) values (%s)",
-"movies",
+"content",
 implode(", ", array_keys($new_movie)),
 ":" . implode(", :", array_keys($new_movie))
     );
